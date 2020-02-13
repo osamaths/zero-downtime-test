@@ -1,5 +1,5 @@
 module.exports = {
-  apps: [{
+  apps : [{
     name: 'API',
     script: 'app.js',
 
@@ -17,14 +17,14 @@ module.exports = {
     }
   }],
 
-  deploy: {
-    production: {
-      user: 'node',
-      host: '46.185.196.119',
-      ref: 'origin/master',
-      repo: 'https://github.com/osamaths/zero-downtime-test.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
+  deploy : {
+    production : {
+      user : 'osamaths',
+      host : '192.168.0.173',
+      ref  : 'origin/master',
+      repo : 'https://github.com/osamaths/zero-downtime-test.git',
+      path : '/var/www/production',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
   }
 };

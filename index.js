@@ -10,7 +10,7 @@ app.get('/', async (req, res) => {
 function waiter() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve('Done ' + (Math.random().toFixed(2) * 10));
+            resolve('2Done ' + (Math.random().toFixed(2) * 10));
         }, 15000);
     })
 }
